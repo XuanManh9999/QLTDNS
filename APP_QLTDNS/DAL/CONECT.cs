@@ -11,7 +11,7 @@ namespace DAL
     {
         public static SqlConnection chuoiKetNoi()
         {
-            string strCon = "Data Source=DESKTOP-LNJ99RH\\SQLEXPRESS;Initial Catalog=QLTDNS;Integrated Security=True";
+            string strCon = @"Data Source=DESKTOP-LNJ99RH\\SQLEXPRESS;Initial Catalog=QLTDNS;Integrated Security=True";
             SqlConnection sqlCON = new SqlConnection(strCon);
             sqlCON.Open();
             return sqlCON;
