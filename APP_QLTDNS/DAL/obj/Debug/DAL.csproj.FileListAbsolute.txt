@@ -1,0 +1,10 @@
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.csproj.SuggestedBindingRedirects.cache
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.Properties.Resources.resources
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\QLTDNS\APP_QLTDNS\DAL\bin\Debug\DAL.exe.config
+D:\QLTDNS\APP_QLTDNS\DAL\bin\Debug\DAL.exe
+D:\QLTDNS\APP_QLTDNS\DAL\bin\Debug\DAL.pdb
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.exe
+D:\QLTDNS\APP_QLTDNS\DAL\obj\Debug\DAL.pdb
