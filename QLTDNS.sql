@@ -27,7 +27,7 @@ CREATE TABLE UNGVIEN(
 	Gmail varchar(50),
 	TrinhDo nvarchar(200),
 	KinhNghiem nvarchar(200),
-	MaTk varchar(10)foreign key references TAIKHOAN(MaTk)
+	TenTK nvarchar(50) foreign key references TAIKHOAN(TenTK)
 )
 CREATE TABLE UNGTUYEN(
 	MaUV varchar(10) foreign key references UNGVIEN(MaUngVien),
@@ -44,12 +44,17 @@ CREATE TABLE TUYENDUNG (
 )
 CREATE TABLE QUANLYTAIKHOAN(
 	MaQL varchar(10) foreign key references QUANLY(MaQL),
-	MaTK varchar(10) foreign key references TAIKHOAN(MaTK)
-	primary key (MaQL, MaTK)
+	TenTK nvarchar(50) foreign key references TAIKHOAN(TenTK)
+	primary key (MaQL, TenTK)
 )
 CREATE TABLE TAIKHOAN(
-	MaTK VARCHAR(10) primary key ,
-	TenTK nvarchar(50),
+	TenTK nvarchar(50) primary key,
 	MatKhau nvarchar(50)
 )
 -- Dựng DaTaBase
+-----------------------------------------------Các truy vấn----------------------
+select MatKhau from TAIKHOAN
+select * from TAIKHOAN
+select MatKhau from TAIKHOAN where TenTK = N'Xuân Mạnh';
+insert into TAIKHOAN values (N'Xuân Mạnh', N'123')
+insert into TAIKHOAN values (N'1', N'123')

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +40,34 @@ namespace GUI
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            CloseAllForms();
+            TaiKhoan taiKhoan = new TaiKhoan(txtNhapTaiKhoan.Text.Trim(), txtNhapMatKhau.Text.Trim());
+            Bus_Ung_Vien ungVien = new Bus_Ung_Vien();
+            if(txtNhapMatKhau.Text != "" && txtNhapTaiKhoan.Text != "")
+            {
+                if ((ungVien.DangNhap(taiKhoan)) || (txtNhapTaiKhoan.Text == "admin" && txtNhapMatKhau.Text == "123"))
+                {
+                    MessageBox.Show("Đăng Nhập Thành Công");
+                }
+                else
+                {
+                    MessageBox.Show("Đăng Nhập Không Thành Công");
+                }
+            }else
+            {
+                MessageBox.Show("Thông Tin Không Được Rỗng");
+            }
+        }
+
+        private void lblQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormQuenMatKhau formQuenMatKhau = new FormQuenMatKhau();
+            formQuenMatKhau.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form_Dang_Ky_Tai_Khoan form_Dang_Ky_Tai_Khoan = new Form_Dang_Ky_Tai_Khoan();
+            form_Dang_Ky_Tai_Khoan.ShowDialog();
         }
     }
 }

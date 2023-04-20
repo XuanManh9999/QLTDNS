@@ -51,9 +51,9 @@
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(131, 23);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(57, 23);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(779, 507);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(940, 527);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Đăng Nhập";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -68,17 +68,19 @@
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Đăng Ký";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // lblQuenMatKhau
             // 
             this.lblQuenMatKhau.AutoSize = true;
             this.lblQuenMatKhau.BackColor = System.Drawing.Color.White;
-            this.lblQuenMatKhau.Location = new System.Drawing.Point(481, 428);
+            this.lblQuenMatKhau.Location = new System.Drawing.Point(684, 428);
             this.lblQuenMatKhau.Name = "lblQuenMatKhau";
             this.lblQuenMatKhau.Size = new System.Drawing.Size(253, 45);
             this.lblQuenMatKhau.TabIndex = 6;
             this.lblQuenMatKhau.TabStop = true;
             this.lblQuenMatKhau.Text = "Quên Mật Khẩu";
+            this.lblQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMatKhau_LinkClicked);
             // 
             // txtNhapMatKhau
             // 
@@ -89,15 +91,16 @@
             this.txtNhapMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNhapMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNhapMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhapMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNhapMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txtNhapMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhapMatKhau.Location = new System.Drawing.Point(293, 259);
             this.txtNhapMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNhapMatKhau.Name = "txtNhapMatKhau";
-            this.txtNhapMatKhau.PasswordChar = '\0';
+            this.txtNhapMatKhau.PasswordChar = '*';
             this.txtNhapMatKhau.PlaceholderText = "Nhập Mật Khẩu";
             this.txtNhapMatKhau.SelectedText = "";
-            this.txtNhapMatKhau.Size = new System.Drawing.Size(441, 50);
+            this.txtNhapMatKhau.Size = new System.Drawing.Size(562, 50);
             this.txtNhapMatKhau.TabIndex = 5;
             // 
             // label2
@@ -133,7 +136,8 @@
             this.txtNhapTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNhapTaiKhoan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNhapTaiKhoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhapTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNhapTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapTaiKhoan.ForeColor = System.Drawing.Color.Black;
             this.txtNhapTaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhapTaiKhoan.Location = new System.Drawing.Point(293, 129);
             this.txtNhapTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -141,13 +145,14 @@
             this.txtNhapTaiKhoan.PasswordChar = '\0';
             this.txtNhapTaiKhoan.PlaceholderText = "Nhập Tài Khoản.";
             this.txtNhapTaiKhoan.SelectedText = "";
-            this.txtNhapTaiKhoan.Size = new System.Drawing.Size(441, 47);
+            this.txtNhapTaiKhoan.Size = new System.Drawing.Size(562, 47);
             this.txtNhapTaiKhoan.TabIndex = 1;
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.BorderRadius = 20;
             this.btnDangNhap.BorderThickness = 1;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -155,9 +160,12 @@
             this.btnDangNhap.FillColor = System.Drawing.Color.White;
             this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.btnDangNhap.HoverState.FillColor = System.Drawing.Color.DarkOrange;
+            this.btnDangNhap.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(37, 341);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(697, 63);
+            this.btnDangNhap.Size = new System.Drawing.Size(818, 63);
             this.btnDangNhap.TabIndex = 0;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
