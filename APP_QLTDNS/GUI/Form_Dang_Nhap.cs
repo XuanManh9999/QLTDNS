@@ -42,11 +42,21 @@ namespace GUI
         {
             TaiKhoan taiKhoan = new TaiKhoan(txtNhapTaiKhoan.Text.Trim(), txtNhapMatKhau.Text.Trim());
             Bus_Ung_Vien ungVien = new Bus_Ung_Vien();
+            Bus_Quan_Ly quanLy = new Bus_Quan_Ly();
             if(txtNhapMatKhau.Text != "" && txtNhapTaiKhoan.Text != "")
             {
-                if ((ungVien.DangNhap(taiKhoan)) || (txtNhapTaiKhoan.Text == "admin" && txtNhapMatKhau.Text == "123"))
+                
+                if (quanLy.dangNhap(taiKhoan))
+                {
+                    Form_Trang_Chu_QL form_Trang_Chu_QL = new Form_Trang_Chu_QL();
+                    form_Trang_Chu_QL.ShowDialog();
+                    return;
+                }
+                if ((ungVien.DangNhap(taiKhoan)))
                 {
                     MessageBox.Show("Đăng Nhập Thành Công");
+                    Form_Trang_Chu_Ung_Vien form_Trang_Chu_Ung_Vien = new Form_Trang_Chu_Ung_Vien();
+                    form_Trang_Chu_Ung_Vien.ShowDialog();
                 }
                 else
                 {

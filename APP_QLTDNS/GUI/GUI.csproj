@@ -76,6 +76,42 @@
     <Compile Include="Form_Dang_Nhap.Designer.cs">
       <DependentUpon>Form_Dang_Nhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_QuanLyTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QuanLyTuyenDung.Designer.cs">
+      <DependentUpon>Form_QuanLyTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quan_Ly_Tai_Khoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quan_Ly_Tai_Khoan.Designer.cs">
+      <DependentUpon>Form_Quan_Ly_Tai_Khoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quan_Ly_Ung_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quan_Ly_Ung_Vien.Designer.cs">
+      <DependentUpon>Form_Quan_Ly_Ung_Vien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Trang_Chu_QL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Trang_Chu_QL.Designer.cs">
+      <DependentUpon>Form_Trang_Chu_QL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Trang_Chu_Ung_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Trang_Chu_Ung_Vien.Designer.cs">
+      <DependentUpon>Form_Trang_Chu_Ung_Vien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Xem_Viec_Lam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Xem_Viec_Lam.Designer.cs">
+      <DependentUpon>Form_Xem_Viec_Lam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormQuenMatKhau.resx">
@@ -90,6 +126,24 @@
     <EmbeddedResource Include="Form_Dang_Nhap.resx">
       <DependentUpon>Form_Dang_Nhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_QuanLyTuyenDung.resx">
+      <DependentUpon>Form_QuanLyTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quan_Ly_Tai_Khoan.resx">
+      <DependentUpon>Form_Quan_Ly_Tai_Khoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quan_Ly_Ung_Vien.resx">
+      <DependentUpon>Form_Quan_Ly_Ung_Vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Trang_Chu_QL.resx">
+      <DependentUpon>Form_Trang_Chu_QL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Trang_Chu_Ung_Vien.resx">
+      <DependentUpon>Form_Trang_Chu_Ung_Vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Xem_Viec_Lam.resx">
+      <DependentUpon>Form_Xem_Viec_Lam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,6 +152,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -122,6 +177,9 @@
       <Project>{bf5b0871-c262-4522-ba05-aa6bb864b5e7}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tuyen-dung-2--768x480.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

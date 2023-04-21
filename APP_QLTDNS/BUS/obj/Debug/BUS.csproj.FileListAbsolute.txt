@@ -12,3 +12,17 @@ D:\QLTDNS\APP_QLTDNS\BUS\bin\Debug\DAL.exe
 D:\QLTDNS\APP_QLTDNS\BUS\bin\Debug\DAL.pdb
 D:\QLTDNS\APP_QLTDNS\BUS\bin\Debug\DAL.exe.config
 D:\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\bin\Debug\BUS.exe.config
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\bin\Debug\BUS.exe
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\bin\Debug\BUS.pdb
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\bin\Debug\DAL.exe
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\bin\Debug\DAL.pdb
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\bin\Debug\DAL.exe.config
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.csproj.SuggestedBindingRedirects.cache
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.exe
+D:\QLTDNS_NEW\QLTDNS\APP_QLTDNS\BUS\obj\Debug\BUS.pdb
