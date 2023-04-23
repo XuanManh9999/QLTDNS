@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,14 @@ namespace DAL
         void suaUngVien();
         void xoaUngVien();
         void timKiemUngVien();
-        void thongKeUngVien();
+        SqlDataReader thongKeUngVien();
         bool themNoiDungTuyenDung(TuyenDung tuyenDung);
         bool suaNoiDungTuyenDung(TuyenDung tuyenDung);
         bool xoaNoiDungTuyenDung(string matd);
         SqlDataReader timNoiDungTuyenDung(string data);
+        SqlDataReader hienThiUngVienUngTuyen();
+        bool loaiUngVien(string maTD, string maUV);
+        SqlDataReader timKiemUngVIenUngTuyen(string data);
     }
     public class QUANLY : PERSON, IQUANLY
     {
@@ -113,8 +117,14 @@ namespace DAL
         public void timKiemUngVien() {
         
         }
-        public void thongKeUngVien() {
-        
+        public SqlDataReader thongKeUngVien() {
+            // kết xuất nguồn dữ liệu cho report
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = CommandType.Text;
+            sqlCMD.CommandText = "select  UNGVIEN.TenUngVien, UNGVIEN.DiaChi, UNGVIEN.TrinhDo, UNGVIEN.KinhNghiem, TUYENDUNG.NoiDungTuyenDung, UNGVIEN.Sdt from UNGVIEN, TUYENDUNG, UNGTUYEN where TUYENDUNG.MaTD = UNGTUYEN.MaTD and UNGVIEN.MaUngVien = UNGTUYEN.MaUV";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            return reader;
         }
         public void layMaTuyenDung()
         {
@@ -184,6 +194,33 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"select * from TUYENDUNG where NoiDungTuyenDung like N'%{data}%' or YeuCau like N'%{data}%' or Luong like '%{data}%'";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            return reader;
+        }
+        public SqlDataReader hienThiUngVienUngTuyen()
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = "select UNGVIEN.TenUngVien, UNGVIEN.DiaChi, UNGVIEN.TrinhDo, UNGVIEN.KinhNghiem, TUYENDUNG.NoiDungTuyenDung, UNGVIEN.Sdt, UNGVIEN.MaUngVien, TUYENDUNG.MaTD from UNGVIEN, TUYENDUNG, UNGTUYEN where TUYENDUNG.MaTD = UNGTUYEN.MaTD and UNGVIEN.MaUngVien = UNGTUYEN.MaUV";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            return reader;
+        }
+        public bool loaiUngVien(string maTD, string maUV)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"delete from UNGTUYEN where MaUV = '{maUV}' and MaTD = '{maTD}'";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            if (sqlCMD.ExecuteNonQuery() > 0) { return true; }
+            return false;
+        }
+        public SqlDataReader timKiemUngVIenUngTuyen(string data)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"select UNGVIEN.TenUngVien, UNGVIEN.DiaChi, UNGVIEN.TrinhDo, UNGVIEN.KinhNghiem, TUYENDUNG.NoiDungTuyenDung, UNGVIEN.Sdt, UNGVIEN.MaUngVien, TUYENDUNG.MaTD from UNGVIEN, TUYENDUNG, UNGTUYEN where TUYENDUNG.MaTD = UNGTUYEN.MaTD and UNGVIEN.MaUngVien = UNGTUYEN.MaUV and TenUngVien like N'%{data}%' ";
             sqlCMD.Connection = CONECT.chuoiKetNoi();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;

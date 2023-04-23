@@ -1,6 +1,7 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,24 @@ namespace BUS
             {
                 return false;
             }
+        }
+        public bool ungTuyen(string maUV, string maTD)
+        {
+            return ungVien.ungTuyen(maUV, maTD);
+        }
+        public string getMaUV(string tenUV)
+        {
+            return ungVien.getMaUV(tenUV);
+        }
+        // Hiển thị thông tin
+        public SqlDataReader hienThiThongTinUngVien(string maUV)
+        {
+            return ungVien.xemThongTin(maUV);
+        }
+        // cập nhật thông tin
+        public bool capNhatTTUngVien(string maUV, UNGVIEN ungVien)
+        {
+            return ungVien.capNhatThongTin(maUV, ungVien);
         }
     }
 }

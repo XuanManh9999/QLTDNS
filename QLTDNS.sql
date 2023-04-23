@@ -58,3 +58,21 @@ select * from TAIKHOAN
 select MatKhau from TAIKHOAN where TenTK = N'Xuân Mạnh';
 insert into TAIKHOAN values (N'Xuân Mạnh', N'123')
 insert into TAIKHOAN values (N'1', N'123')
+update TAIKHOAN set TenTK = N'', MatKhau = N'123' where TenTK = N''
+select * from TAIKHOAN
+delete from TAIKHOAN where TenTK = N''
+select * from TAIKHOAN where TenTK like N'%N%' or MatKhau like N'%A%'
+select * from TUYENDUNG 
+select MaTD from TUYENDUNG
+update TUYENDUNG set NoiDungTuyenDung = N'', PhucLoi = N'', Luong = '', YeuCau = N'', ThoiGianTuyenDung = ''   where MaTD = 'MTD001'
+delete from TUYENDUNG where MaTD = 'MTD001'
+select * from TUYENDUNG where NoiDungTuyenDung like N'%Áo%' or YeuCau like N'%Kẹo%' or Luong like '%12%'
+insert into TUYENDUNG values ('MTD001', N'Bán Hàng Quần Áo', N'Đóng BHXH', '999', N'Tốt Nghiệp Cấp 3', N'20h')
+select * from TUYENDUNG where NoiDungTuyenDung like N'%NET%' or YeuCau like N'%NET%' or Luong like '%NET%'
+select * from UNGVIEN
+insert into UNGTUYEN values('UV001', 'MTD001');
+select UNGVIEN.TenUngVien, UNGVIEN.DiaChi, TUYENDUNG.NoiDungTuyenDung from UNGVIEN, TUYENDUNG, UNGTUYEN where TUYENDUNG.MaTD = UNGTUYEN.MaTD and UNGVIEN.MaUngVien = UNGTUYEN.MaUV
+select * from TUYENDUNG
+select * from UNGVIEN
+select * from UNGTUYEN
+select MaUngVien from TAIKHOAN, UNGVIEN where TAIKHOAN.TenTK = N'Xuân Mạnh' and UNGVIEN.TenTK = TAIKHOAN.TenTK

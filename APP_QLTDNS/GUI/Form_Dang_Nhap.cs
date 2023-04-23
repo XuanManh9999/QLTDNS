@@ -54,8 +54,8 @@ namespace GUI
                 }
                 if ((ungVien.DangNhap(taiKhoan)))
                 {
-                    MessageBox.Show("Đăng Nhập Thành Công");
-                    Form_Trang_Chu_Ung_Vien form_Trang_Chu_Ung_Vien = new Form_Trang_Chu_Ung_Vien();
+                    string data = ungVien.getMaUV(txtNhapTaiKhoan.Text.Trim());
+                    Form_Trang_Chu_Ung_Vien form_Trang_Chu_Ung_Vien = new Form_Trang_Chu_Ung_Vien(data);
                     form_Trang_Chu_Ung_Vien.ShowDialog();
                 }
                 else

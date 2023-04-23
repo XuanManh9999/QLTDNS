@@ -63,9 +63,29 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_2_icon {
+            get {
+                object obj = ResourceManager.GetObject("Back-2-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tuyen_dung_2__768x480 {
             get {
                 object obj = ResourceManager.GetObject("tuyen-dung-2--768x480", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Coat_Red_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Coat-Red-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

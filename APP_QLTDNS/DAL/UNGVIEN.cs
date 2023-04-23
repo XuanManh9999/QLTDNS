@@ -15,9 +15,9 @@ namespace DAL
         bool dangKy(TaiKhoan taiKhoan);
         string quenMatKhau(string tenTK);
         bool capNhatThongTinUngVien(UNGVIEN ungVien);
-        void ungTuyen();
-        void xemThongTin();
-        void timKiemCongViec();
+        bool ungTuyen(string maTD, string maUV);
+        SqlDataReader xemThongTin(string maUV);
+        bool capNhatThongTin(string maUV, UNGVIEN ungVien);
     }
     public class UNGVIEN : PERSON, IUNGVIEN
     {
@@ -187,14 +187,53 @@ namespace DAL
                 return false;
             }
         }
-        public void ungTuyen() {
-        
+        public bool ungTuyen(string maTD, string maUV)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"insert into UNGTUYEN values('{maTD}', '{maUV}');";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            if (sqlCMD.ExecuteNonQuery() > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        public void xemThongTin() {
-        
+        public string getMaUV(string tenTK)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"select MaUngVien from TAIKHOAN, UNGVIEN where TAIKHOAN.TenTK = N'{tenTK}' and UNGVIEN.TenTK = TAIKHOAN.TenTK";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            if (reader.Read())
+            {
+                return reader.GetString(0);
+            }
+            return "";
         }
-        public void timKiemCongViec() {
-        
+        public SqlDataReader xemThongTin(string maUV)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"select * from UNGVIEN where MaUngVien = '{maUV}'";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            return reader;
+        }
+        public bool capNhatThongTin(string maUV, UNGVIEN ungVien)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"update UNGVIEN set  TenUngVien = N'{ungVien.hoTen}', DiaChi = N'{ungVien.diaChi}', NgaySinh = '{ungVien.ngaySinh}', Sdt = '{ungVien.sdt}', Gmail = '{ungVien.gmail}', TrinhDo = N'{ungVien.trinhDo}', KinhNghiem = N'{ungVien.kinhNghiem}' where MaUngVien = '{maUV}'";
+            sqlCMD.Connection = CONECT.chuoiKetNoi();
+            if (sqlCMD.ExecuteNonQuery() > 0) {
+                return true;
+            }
+            return false;
         }
     }
 }

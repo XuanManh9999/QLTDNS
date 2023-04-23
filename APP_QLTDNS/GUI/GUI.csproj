@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -41,6 +45,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet_Ung_Vien_Duoc_Tuyen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Ung_Vien_Duoc_Tuyen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormInBao_Cao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInBao_Cao.Designer.cs">
+      <DependentUpon>FormInBao_Cao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +110,12 @@
     <Compile Include="Form_Quan_Ly_Ung_Vien.Designer.cs">
       <DependentUpon>Form_Quan_Ly_Ung_Vien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Thong_Tin_Ung_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Thong_Tin_Ung_Vien.Designer.cs">
+      <DependentUpon>Form_Thong_Tin_Ung_Vien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Trang_Chu_QL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +136,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptUngVienUngTuyen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUngVienUngTuyen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormInBao_Cao.resx">
+      <DependentUpon>FormInBao_Cao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +166,9 @@
     <EmbeddedResource Include="Form_Quan_Ly_Ung_Vien.resx">
       <DependentUpon>Form_Quan_Ly_Ung_Vien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Thong_Tin_Ung_Vien.resx">
+      <DependentUpon>Form_Thong_Tin_Ung_Vien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Trang_Chu_QL.resx">
       <DependentUpon>Form_Trang_Chu_QL.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +188,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptUngVienUngTuyen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUngVienUngTuyen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSet_Ung_Vien_Duoc_Tuyen.xsc">
+      <DependentUpon>DataSet_Ung_Vien_Duoc_Tuyen.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Ung_Vien_Duoc_Tuyen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Ung_Vien_Duoc_Tuyen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Ung_Vien_Duoc_Tuyen.xss">
+      <DependentUpon>DataSet_Ung_Vien_Duoc_Tuyen.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -180,6 +229,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tuyen-dung-2--768x480.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Coat-Red-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

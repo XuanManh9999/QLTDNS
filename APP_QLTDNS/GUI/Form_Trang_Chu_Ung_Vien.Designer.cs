@@ -100,6 +100,7 @@
             this.btnThongTin.Size = new System.Drawing.Size(262, 63);
             this.btnThongTin.TabIndex = 5;
             this.btnThongTin.Text = "Thông Tin";
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
             // 
             // btnDangXuat
             // 
@@ -143,6 +144,7 @@
             this.btnXemViecLam.Size = new System.Drawing.Size(262, 63);
             this.btnXemViecLam.TabIndex = 4;
             this.btnXemViecLam.Text = "Xem Việc Làm";
+            this.btnXemViecLam.Click += new System.EventHandler(this.btnXemViecLam_Click);
             // 
             // Form_Trang_Chu_Ung_Vien
             // 
@@ -154,7 +156,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Trang_Chu_Ung_Vien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Trang_Chu_Ung_Vien";
+            this.Load += new System.EventHandler(this.Form_Trang_Chu_Ung_Vien_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);

@@ -151,5 +151,10 @@ namespace GUI
             txtLuong.Text = item.SubItems[3].Text;
             txtYeuCau.Text = item.SubItems[4].Text;
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
     }
 }

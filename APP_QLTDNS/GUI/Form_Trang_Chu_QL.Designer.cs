@@ -30,15 +30,15 @@
         {
             this.btnQuanLyTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQuanLyTuyenDung = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLyUngVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
-            this.btnQuanLyTuyenDung = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnQuanLyTaiKhoan
@@ -74,6 +74,18 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(744, 513);
             this.guna2GroupBox1.TabIndex = 4;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.tuyen_dung_2__768x480;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(744, 513);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // guna2GroupBox2
             // 
             this.guna2GroupBox2.BackColor = System.Drawing.SystemColors.Control;
@@ -94,47 +106,27 @@
             this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2GroupBox2.TextOffset = new System.Drawing.Point(0, 2);
             // 
-            // btnQuanLyUngVien
+            // btnDangXuat
             // 
-            this.btnQuanLyUngVien.BackColor = System.Drawing.SystemColors.Control;
-            this.btnQuanLyUngVien.BorderThickness = 1;
-            this.btnQuanLyUngVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyUngVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnQuanLyUngVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnQuanLyUngVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnQuanLyUngVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnQuanLyUngVien.FillColor = System.Drawing.Color.White;
-            this.btnQuanLyUngVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyUngVien.ForeColor = System.Drawing.Color.Black;
-            this.btnQuanLyUngVien.HoverState.FillColor = System.Drawing.Color.DarkOrange;
-            this.btnQuanLyUngVien.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyUngVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyUngVien.Location = new System.Drawing.Point(3, 122);
-            this.btnQuanLyUngVien.Name = "btnQuanLyUngVien";
-            this.btnQuanLyUngVien.Size = new System.Drawing.Size(280, 63);
-            this.btnQuanLyUngVien.TabIndex = 5;
-            this.btnQuanLyUngVien.Text = "Quản Lý Ứng Viên";
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.BackColor = System.Drawing.SystemColors.Control;
-            this.btnThongKe.BorderThickness = 1;
-            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongKe.FillColor = System.Drawing.Color.White;
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
-            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.DarkOrange;
-            this.btnThongKe.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 260);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(280, 63);
-            this.btnThongKe.TabIndex = 5;
-            this.btnThongKe.Text = "Thống Kê";
+            this.btnDangXuat.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDangXuat.BorderThickness = 1;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangXuat.FillColor = System.Drawing.Color.White;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.DarkOrange;
+            this.btnDangXuat.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Location = new System.Drawing.Point(3, 329);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(280, 63);
+            this.btnDangXuat.TabIndex = 7;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnQuanLyTuyenDung
             // 
@@ -158,39 +150,49 @@
             this.btnQuanLyTuyenDung.Text = "Quản Lý Tuyển Dụng";
             this.btnQuanLyTuyenDung.Click += new System.EventHandler(this.btnQuanLyTuyenDung_Click);
             // 
-            // btnDangXuat
+            // btnQuanLyUngVien
             // 
-            this.btnDangXuat.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDangXuat.BorderThickness = 1;
-            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangXuat.FillColor = System.Drawing.Color.White;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.DarkOrange;
-            this.btnDangXuat.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 329);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(280, 63);
-            this.btnDangXuat.TabIndex = 7;
-            this.btnDangXuat.Text = "Đăng Xuất";
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            this.btnQuanLyUngVien.BackColor = System.Drawing.SystemColors.Control;
+            this.btnQuanLyUngVien.BorderThickness = 1;
+            this.btnQuanLyUngVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuanLyUngVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLyUngVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLyUngVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQuanLyUngVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQuanLyUngVien.FillColor = System.Drawing.Color.White;
+            this.btnQuanLyUngVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyUngVien.ForeColor = System.Drawing.Color.Black;
+            this.btnQuanLyUngVien.HoverState.FillColor = System.Drawing.Color.DarkOrange;
+            this.btnQuanLyUngVien.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyUngVien.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyUngVien.Location = new System.Drawing.Point(3, 122);
+            this.btnQuanLyUngVien.Name = "btnQuanLyUngVien";
+            this.btnQuanLyUngVien.Size = new System.Drawing.Size(280, 63);
+            this.btnQuanLyUngVien.TabIndex = 5;
+            this.btnQuanLyUngVien.Text = "Ứng Viên Ứng Tuyển";
+            this.btnQuanLyUngVien.Click += new System.EventHandler(this.btnQuanLyUngVien_Click);
             // 
-            // guna2PictureBox1
+            // btnThongKe
             // 
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.tuyen_dung_2__768x480;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(744, 513);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.btnThongKe.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThongKe.BorderThickness = 1;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.FillColor = System.Drawing.Color.White;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
+            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.DarkOrange;
+            this.btnThongKe.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Location = new System.Drawing.Point(3, 260);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(280, 63);
+            this.btnThongKe.TabIndex = 5;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // Form_Trang_Chu_QL
             // 
@@ -200,13 +202,14 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2GroupBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Trang_Chu_QL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Trang_Chu_QL";
+            this.Load += new System.EventHandler(this.Form_Trang_Chu_QL_Load);
             this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

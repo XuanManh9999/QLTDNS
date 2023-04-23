@@ -52,5 +52,22 @@ namespace BUS
         {
             return quanLY.timNoiDungTuyenDung(data);
         }
+        public SqlDataReader hienThiUngVienUngTuyen()
+        {
+            return quanLY.hienThiUngVienUngTuyen();
+        }
+        public bool LoaiUngVien(string maTD, string maUV)
+        {
+            return quanLY.loaiUngVien(maTD, maUV);
+        }
+        public SqlDataReader timKiemUngVien(string data)
+        {
+            return quanLY.timKiemUngVIenUngTuyen(data);
+        }
+        // Tạo Báo Cáo
+        public SqlDataReader UngVienDuocTuyenDung()
+        {
+            return quanLY.thongKeUngVien();
+        }
     }
 }
